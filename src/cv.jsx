@@ -1,9 +1,10 @@
 import "./cv.css";
 import pp from "./assets/pp.jpg";
+import Navbar from "./navbar.jsx";
 
 export default function Cv() {
   return ( 
-    
+    <><Navbar />
     <div className="page">
         <aside className="sidebar">
             <img src={pp} alt="Pp" className="Pp"/>
@@ -94,6 +95,6 @@ export default function Cv() {
             </div>
     </main>
     </div>
-    
+    </>
   );
 }
