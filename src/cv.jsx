@@ -3,7 +3,30 @@ import pp from "./assets/pp.jpg";
 import Navbar from "./navbar.jsx";
 
 export default function Cv() {
-  return ( 
+
+    const descargarCV = async () => {
+        try {
+            const response = await fetch("http://127.0.0.1:8000/api/download/cv", {
+                method: "GET",
+                mode: "cors"
+            });
+            if (!response.ok) throw new Error("No se pudo descargar el CV");
+
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = "CV_Eduardo_Duarte.pdf";
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            window.URL.revokeObjectURL(url)
+        } catch (error) {
+            console.error("Error al descargar el CV:", error);
+        }
+        };
+    return ( 
     <><Navbar />
     <div className="page">
         <aside className="sidebar">
@@ -13,7 +36,8 @@ export default function Cv() {
             <a href="mailto:eduardo.jose881@gmail.com">Email</a>
             <a href="https://www.linkedin.com/in/eduardo-duarte-penna/">LinkedIn</a>
             <a href="https://github.com/EDuarP"></a>
-            <a href="download_cv">Descargar CV</a>
+            <p></p>
+            <button className="btn primary" onClick={descargarCV}>Descargar CV</button>
         </aside>
         <main className="cv">
         <div className="content">

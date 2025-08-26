@@ -3,7 +3,7 @@ import pp from "./assets/pp.jpg";
 import logo_linkedin from "./assets/linkedin-logo.svg";
 import logo_github from "./assets/github-logo.svg";
 import logo_mail from "./assets/mail-logo.svg";
-import ellipse from "./assets/Ellipse 2.svg";
+
 
 export default function Home() {
   return (
