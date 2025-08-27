@@ -13,6 +13,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/cv" element={<Cv />} />
         <Route path="/api/download/cv" element={<Cv />} />
+        <Route path="/cv" element={<Cv />} />
       </Routes>
     </Router>
   );

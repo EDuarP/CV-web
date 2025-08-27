@@ -19,7 +19,8 @@ body {
   gap: 40px;               
   padding: 40px 20px;   
   align-items: flex-start;     
-  justify-content: center;      
+  justify-content: center;  
+  flex-wrap: wrap;    
 }
 
 .cv {
@@ -31,14 +32,22 @@ body {
 }
 
 .sidebar{
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    height: fit-content;      
-    position: sticky;         
-    top: 250px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;      
+  position: sticky;         
+  top: 250px;
     
 }
+@media (max-width: 768px) {
+  .sidebar {
+    position: static; /* Evita conflictos con sticky en layouts verticales */
+    top: 0;
+    margin-bottom: 20px; /* Espacio entre sidebar y contenido */
+    width: 100%;
+    align-items: center;
+  }}
 
 .content {
   margin:0;
@@ -65,4 +74,16 @@ body {
 .btn.primary {
   background: var(--primary);
   color: white;
+}
+.logos{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.info{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 1px;
 }

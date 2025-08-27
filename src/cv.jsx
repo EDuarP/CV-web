@@ -1,6 +1,14 @@
 import "./cv.css";
 import pp from "./assets/pp.jpg";
 import Navbar from "./navbar.jsx";
+import sql from "./assets/sql.png";
+import python from "./assets/python.png";
+import powerbi from "./assets/powe-bi.png";
+import powerapps from "./assets/powerapp.png";
+import powerautomate from "./assets/power-automate.png";
+import visualstudio from "./assets/visual-studio.png";
+import iconreact from "./assets/react.svg";
+import fastapi from "./assets/fastapi-seeklogo.png";
 
 export default function Cv() {
 
@@ -29,15 +37,48 @@ export default function Cv() {
     return ( 
     <><Navbar />
     <div className="page">
-        <aside className="sidebar">
+        <aside className="sidebar info">
             <img src={pp} alt="Pp" className="Pp"/>
             <h3>Eduardo J. Duarte Peña</h3>
-            <p className="ubication">Colombia</p>
-            <a href="mailto:eduardo.jose881@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/in/eduardo-duarte-penna/">LinkedIn</a>
-            <a href="https://github.com/EDuarP"></a>
+            <p>Colombia</p>
+            <div className="info">
+                <a href="mailto:eduardo.jose881@gmail.com">Email </a>
+                <a>
+                   - 
+                </a>
+                <a href="https://www.linkedin.com/in/eduardo-duarte-penna/">  LinkedIn</a>
+                <a href="https://github.com/EDuarP"></a>
+            </div>
             <p></p>
             <button className="btn primary" onClick={descargarCV}>Descargar CV</button>
+            <div className="social">
+                <img 
+                    src={python} 
+                    className="logos" />
+                <img 
+                    src={sql}
+                    className="logos" />
+                <img 
+                    src={powerbi}
+                    className="logos" />
+                <img 
+                    src={visualstudio}
+                    className="logos" />
+            </div>
+            <div className="social">
+                <img 
+                    src={iconreact} 
+                    className="logos" />
+                <img 
+                    src={fastapi}
+                    className="logos" />
+                <img 
+                    src={powerapps}
+                    className="logos" />
+                <img 
+                    src={powerautomate}
+                    className="logos" />
+            </div>
         </aside>
         <main className="cv">
         <div className="content">
@@ -93,13 +134,6 @@ export default function Cv() {
             <ul>
                 <li>1er puesto en CienTIoN 2023 (Investigación e innovación).</li>
                 <li>3er premio en Huawei ICT Competition - Cloud Track (2022-2023).</li>
-            </ul>
-
-            <h2>Referencias Laborales</h2>
-            <ul>
-                <li>Sebastian Murcia – Gerente General en TAYRONAMA SAS – +57 321 6680277</li>
-                <li>Iván Lis – Safety Data Manager en MSD – +57 310 7735259</li>
-                <li>Carlos Pimentel – Profesor Investigador en Universidad Santo Tomás – +57 316 2373049</li>
             </ul>
 
             <h2>Habilidades Técnicas</h2>

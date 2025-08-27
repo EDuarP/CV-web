@@ -8,7 +8,6 @@ export default function Navbar() {
         <li><a href="home">Home</a></li>
         <li><a href="cv">CV</a></li>
         <li><a href="projects">Proyectos</a></li>
-        <li><a href="contact">Contacto</a></li>
       </ul>
     </nav>
   );
