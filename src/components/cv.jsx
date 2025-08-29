@@ -14,28 +14,6 @@ import { motion } from "motion/react";
 
 export default function Cv() {
 
-    const descargarCV = async () => {
-        try {
-            const response = await fetch("http://127.0.0.1:8000/api/download/cv", {
-                method: "GET",
-                mode: "cors"
-            });
-            if (!response.ok) throw new Error("No se pudo descargar el CV");
-
-            const blob = await response.blob();
-            const url = window.URL.createObjectURL(blob);
-
-            const link = document.createElement("a");
-            link.href = url;
-            link.download = "CV_Eduardo_Duarte.pdf";
-            document.body.appendChild(link);
-            link.click();
-            link.remove();
-            window.URL.revokeObjectURL(url)
-        } catch (error) {
-            console.error("Error al descargar el CV:", error);
-        }
-        };
     return ( 
     <><Navbar />
     <motion.div className="page">
@@ -54,7 +32,14 @@ export default function Cv() {
                 <a href="https://github.com/EDuarP"></a>
             </div>
             <p></p>
-            <button className="btn primary" onClick={descargarCV}>Descargar CV</button>
+            <a
+                href="/HV.pdf"
+                download="CV_Eduardo_Duarte.pdf"
+                className="btn primary"
+                >
+                Descargar CV
+                </a>
+
             <div className="social">
                 <img 
                     src={python} 

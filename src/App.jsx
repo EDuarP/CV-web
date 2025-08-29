@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/home.jsx";
 import Cv from "./components/cv.jsx";
 import Projects from "./components/projects.jsx";
@@ -14,7 +13,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/cv" element={<Cv />} />
-            <Route path="/api/download/cv" element={<Cv />} />
             <Route path="/projects" element={<Projects />} />
           </Routes>
         </Router>
