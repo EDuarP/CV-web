@@ -11,11 +11,10 @@ function App() {
       <AnimatePresence mode="wait">
         <Router>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/cv" element={<Cv />} />
-            <Route path="/api/download/cv" element={<Cv />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/cv-web/" element={<Home />} />
+            <Route path="/cv-web/home" element={<Home />} />
+            <Route path="/cv-web/cv" element={<Cv />} />
+            <Route path="/cv-web/projects" element={<Projects />} />
           </Routes>
         </Router>
       </AnimatePresence>
