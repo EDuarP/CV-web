@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/home.jsx";
 import Cv from "./components/cv.jsx";
 import Projects from "./components/projects.jsx";
@@ -8,7 +8,7 @@ function App() {
   return (
     <LayoutGroup>
       <AnimatePresence mode="wait">
-        <Router basename="/CV-web">
+        <Router>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
