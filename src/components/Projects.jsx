@@ -1,17 +1,17 @@
 import React from "react";
 import Cardproject from "./cardproject";
-import ciencia1 from "../assets/proyectos/ciencia1.png";
-import ciencia2 from "../assets/proyectos/ciencia2.png";
-import ciencia3 from "../assets/proyectos/ciencia3.png";
-import rpa1 from "../assets/proyectos/rpa1.png";
-import rpa2 from "../assets/proyectos/rpa2.png";
+import ciencia1 from "../assets/proyectos/ciencia1.webp";
+import ciencia2 from "../assets/proyectos/ciencia2.webp";
+import ciencia3 from "../assets/proyectos/ciencia3.webp";
+import rpa1 from "../assets/proyectos/rpa1.webp";
+import rpa2 from "../assets/proyectos/rpa2.webp";
 import rpa3 from "../assets/proyectos/rpagif.gif";
-import venta1 from "../assets/proyectos/venta1.jpg";
-import venta2 from "../assets/proyectos/venta2.jpg";
+import venta1 from "../assets/proyectos/venta1.webp";
+import venta2 from "../assets/proyectos/venta2.webp";
 import venta3 from "../assets/proyectos/venta3.gif";
-import cerdo1 from "../assets/proyectos/cerdo1.jpg";
-import cerdo2 from "../assets/proyectos/cerdo2.jpg";
-import cerdo3 from "../assets/proyectos/cerdo3.jpg";
+import cerdo1 from "../assets/proyectos/cerdo1.webp";
+import cerdo2 from "../assets/proyectos/cerdo2.webp";
+import cerdo3 from "../assets/proyectos/cerdo3.webp";
 import "./Projects.css";
 import Navbar from "./navbar";
 import circulo from "../assets/Ellipse 2.svg";
@@ -33,7 +33,7 @@ export default function Projects() {
         exit={{ y: -20 }}
         transition={{ duration: 0.5 }}>
       <h1>Proyectos</h1>
-      <div className="bg-white/20 backdrop-blur-md border-white/30 rounded-2xl shadow-lg p-10 max-w-6xl mx-auto">
+      <div className="container-projects">
       <Cardproject 
         Title={"Sistema de gestión para una planta de sacrifico porcina"} 
         Description={"Este proyecto es un sistema de gestión integral para optimizar el control del flujo de cerdos destinados al sacrificio. Registra de forma automática el peso en distintas etapas, almacena la información en una base centralizada y genera reportes PDF para análisis. Incluye notificaciones vía WhatsApp API y manillas impresas con BarTender, garantizando trazabilidad y acceso inmediato a datos de cada lote. Con estas funciones, el sistema mejora la eficiencia, agiliza decisiones estratégicas y aporta a la digitalización del sector agroindustrial."} 

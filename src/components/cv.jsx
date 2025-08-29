@@ -1,14 +1,14 @@
 import "./cv.css";
-import pp from "../assets/pp.jpg";
+import pp from "../assets/pp.webp";
 import Navbar from "./navbar.jsx";
-import sql from "../assets/sql.png";
-import python from "../assets/python.png";
-import powerbi from "../assets/powe-bi.png";
-import powerapps from "../assets/powerapp.png";
-import powerautomate from "../assets/power-automate.png";
-import visualstudio from "../assets/visual-studio.png";
+import sql from "../assets/sql.webp";
+import python from "../assets/python.webp";
+import powerbi from "../assets/powe-bi.webp";
+import powerapps from "../assets/powerapp.webp";
+import powerautomate from "../assets/power-automate.webp";
+import visualstudio from "../assets/visual-studio.webp";
 import iconreact from "../assets/react.svg";
-import fastapi from "../assets/fastapi-seeklogo.png";
+import fastapi from "../assets/fastapi-seeklogo.webp";
 import circulo from "../assets/Ellipse 2.svg";
 import { motion } from "motion/react";
 

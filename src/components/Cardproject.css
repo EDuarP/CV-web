@@ -5,6 +5,29 @@
     background-color: #ffffff00;
     color: rgb(0, 0, 0);
 }
+
+@media (max-width: 1300px) {
+  .Cards {
+    flex-direction: column; /* primero texto, luego imágenes */
+    align-items: center;    /* centrar contenido */
+  }
+
+  .texto {
+    width: 100%;        /* ocupar todo el ancho */
+    max-width: 900px;   /* controlas el ancho si quieres */
+    font-size: large;   /* un poco más pequeño en pantallas chicas */
+  }
+
+  .gallery {
+    grid-template-columns: 1fr; /* imágenes en una sola columna */
+    max-width: 100%;
+  }
+
+  .img-large {
+    grid-column: span 1; /* que no intente abarcar dos columnas */
+  }
+}
+
 .ContainerCard{
     margin-top: 50px;
     margin-bottom: 50px;
@@ -19,8 +42,9 @@
     padding: 5%;
     display: grid;
     grid-column: 1fr;
-    width: 800px;
-    font-size: x-large
+    width: 100%;
+    max-width: 800px;   /* límite máximo en pantallas grandes */
+    font-size: clamp(16px, 2vw, 22px); /* texto fluido según ancho */
 }
 
 .font-bold{
@@ -35,6 +59,7 @@
   align-items: center;
   max-width: 1000px;   /* ancho máximo total */
   margin: 0 auto;
+  width: 100%;         /* ocupa todo el ancho posible */
 }
 
 .gallery img {

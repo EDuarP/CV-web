@@ -5,6 +5,20 @@
     --text: #222;
 }
 
+.container-projects{
+    position: relative;
+    padding: 50px 20px;
+    overflow: hidden;
+    min-height: 100vh; /* Asegura que el contenedor tenga al menos la altura de la ventana */
+}
+
+  /* En pantallas pequeñas */
+@media (max-width: 1300px) {
+  .container-projects {
+    flex-direction: column; /* aside arriba */
+  }
+}
+
 body {
   display: flex;
   justify-content: center;

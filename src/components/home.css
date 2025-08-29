@@ -32,26 +32,30 @@ body {
 
 /* Foto */
 .profile-img {
-  width: 777px;
-  height: 777px;
+  width: 100%;
+  max-width: 777px;   /* límite en pantallas grandes */
+  height: auto;       /* mantiene proporción */
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .logo_red {
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  max-width: 50px;
+  height: auto;
 }
 
 .logo_linkedin {
-  width: 55px;
-  height: 55px;
+  width: 100%;
+  max-width: 55px;
+  height: auto;
 }
 
 .logo_mail{
-    width: 50px;
-    height: 50px;
+  width: 100%;
+  max-width: 50px;
+  height: auto;
 }
 
 
@@ -62,7 +66,7 @@ body {
 }
 
 .hero-right h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* escala entre móvil y desktop */
   margin: 0;
 }
 
@@ -71,15 +75,13 @@ body {
 }
 
 .role {
-  font-size: 1.5rem;
-  color: var(--secondary);
-  margin-top: 5px;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
 }
 
 .bio {
-  margin-top: 20px;
+  font-size: clamp(1rem, 3vw, 1.3rem);
   line-height: 1.6;
-  font-size: 1.3rem;
+  margin-top: 20px;
   color: #444;
 }
 
@@ -94,22 +96,19 @@ body {
   gap: 15px;
 }
 
-.btn {
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
 
 .btn.primary {
   background: var(--primary);
   color: white;
+  padding: 10px 20px;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .btn.secondary {
   background: var(--secondary);
   color: white;
+  padding: 10px 20px;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .btn:hover {
@@ -135,10 +134,41 @@ body {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   margin-bottom: 20px;
-  flex: 1;                   
-  text-align: left;        
+  text-align: left;     
+}
+
+/* Ajustes responsive extra */
+@media (max-width: 768px) {
+  .home {
+    padding: 30px 20px;
+  }
+
+  .hero {
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-right {
+    min-width: 100%;
+  }
+
+  .cta {
+    justify-content: center;
+  }
+
+  .social {
+    justify-content: center;
+  }
+
+  .certificados{
+    position: absolute;
+    margin-top: clamp(2rem, 5vw, 4rem);
+    bottom: -520px;
+  }
+
 }
 
 .home .circulo {
@@ -181,4 +211,6 @@ body {
   position: absolute;
   bottom: 0px;
   padding-top: 100px;
+  margin-top: clamp(2rem, 5vw, 4rem);
+  transform: translateY(20px);
 }

@@ -1,18 +1,18 @@
 import "./Home.css";
-import pp from "../assets/pp.jpg";
+import pp from "../assets/pp.webp";
 import logo_linkedin from "../assets/linkedin-logo.svg";
 import logo_github from "../assets/github-logo.svg";
 import logo_mail from "../assets/mail-logo.svg";
-import ciention from '../assets/certificados/ciention.jpg';
-import datasciencemintic from '../assets/certificados/datasciencemintic.jpg';
-import googledataanalytics from '../assets/certificados/googledataanalytics.jpg';
-import huawei from '../assets/certificados/huawei.jpg';
-import iasolutions from '../assets/certificados/iasolutions.jpg';
-import incko from '../assets/certificados/incko.jpg';
-import innovador from '../assets/certificados/innovador.jpg';
-import joveninvestigador from '../assets/certificados/joveninvestigador.jpg';
-import processimprovement from '../assets/certificados/processimprovement.jpg';
-import worksantoto from '../assets/certificados/worksantoto.jpg';
+import ciention from '../assets/certificados/ciention.webp';
+import datasciencemintic from '../assets/certificados/datasciencemintic.webp';
+import googledataanalytics from '../assets/certificados/googledataanalytics.webp';
+import huawei from '../assets/certificados/huawei.webp';
+import iasolutions from '../assets/certificados/iasolutions.webp';
+import incko from '../assets/certificados/incko.webp';
+import innovador from '../assets/certificados/innovador.webp';
+import joveninvestigador from '../assets/certificados/joveninvestigador.webp';
+import processimprovement from '../assets/certificados/processimprovement.webp';
+import worksantoto from '../assets/certificados/worksantoto.webp';
 import Carousel from "./carousel.jsx";
 import circulo from "../assets/Ellipse 2.svg";
 import { Link } from "react-router-dom";
@@ -101,7 +101,8 @@ export default function Home() {
       initial={{ opacity: 0.4 }}   
       animate={{ opacity: 0.4 }}   
       exit={{ opacity: 0}}/>
-      <h1 className="text-4xl font-bold text-gray-800 mb-6 certificados">Certificados ↓</h1>
+      <p>asd</p>
+      <h1 className="certificados">Certificados ↓</h1>
     </main>
     
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
