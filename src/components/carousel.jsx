@@ -24,7 +24,7 @@ export default function Carousel({ images }) {
 
   const handlePrev = () => {
     setCurrentIndex(prev => (prev <= 0 ? maxIndex : prev - 1));
-  };
+  }; 
   const handleNext = () => {
     setCurrentIndex(prev => (prev >= maxIndex ? 0 : prev + 1));
   };
