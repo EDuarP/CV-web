@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./components/home.jsx";
 import Cv from "./components/cv.jsx";
 import Projects from "./components/projects.jsx";
@@ -9,12 +8,12 @@ function App() {
   return (
     <LayoutGroup>
       <AnimatePresence mode="wait">
-        <Router>
+        <Router basename="/CV-web">
           <Routes>
-            <Route path="/cv-web/" element={<Home />} />
-            <Route path="/cv-web/home" element={<Home />} />
-            <Route path="/cv-web/cv" element={<Cv />} />
-            <Route path="/cv-web/projects" element={<Projects />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/cv" element={<Cv />} />
+            <Route path="/projects" element={<Projects />} />
           </Routes>
         </Router>
       </AnimatePresence>
