@@ -1,14 +1,16 @@
 import "./cv.css";
-import pp from "./assets/pp.jpg";
+import pp from "../assets/pp.jpg";
 import Navbar from "./navbar.jsx";
-import sql from "./assets/sql.png";
-import python from "./assets/python.png";
-import powerbi from "./assets/powe-bi.png";
-import powerapps from "./assets/powerapp.png";
-import powerautomate from "./assets/power-automate.png";
-import visualstudio from "./assets/visual-studio.png";
-import iconreact from "./assets/react.svg";
-import fastapi from "./assets/fastapi-seeklogo.png";
+import sql from "../assets/sql.png";
+import python from "../assets/python.png";
+import powerbi from "../assets/powe-bi.png";
+import powerapps from "../assets/powerapp.png";
+import powerautomate from "../assets/power-automate.png";
+import visualstudio from "../assets/visual-studio.png";
+import iconreact from "../assets/react.svg";
+import fastapi from "../assets/fastapi-seeklogo.png";
+import circulo from "../assets/Ellipse 2.svg";
+import { motion } from "motion/react";
 
 export default function Cv() {
 
@@ -36,9 +38,11 @@ export default function Cv() {
         };
     return ( 
     <><Navbar />
-    <div className="page">
+    <motion.div className="page">
         <aside className="sidebar info">
-            <img src={pp} alt="Pp" className="Pp"/>
+            <motion.img src={pp} alt="Pp" className="Pp" layoutId="pp" 
+            initial={false} transition={{ duration: 0.6, ease: "easeInOut" }}     
+            exit={{ opacity: 0}}/>
             <h3>Eduardo J. Duarte Peña</h3>
             <p>Colombia</p>
             <div className="info">
@@ -80,7 +84,11 @@ export default function Cv() {
                     className="logos" />
             </div>
         </aside>
-        <main className="cv">
+        <motion.main className="cv-container" initial={{ y: 20 }}
+            animate={{ y: 0 }}
+            exit={{ y: -20 }}
+            transition={{ duration: 0.5 }}>
+        <div className="cv">
         <div className="content">
             <h2>Educación</h2>
             <ul>
@@ -89,6 +97,17 @@ export default function Cv() {
             </ul>
 
             <h2>Experiencia</h2>
+
+            
+            <h3>Ingeniero de Software – ELVA AI (Agosto 2025 - Actual)</h3>
+            <ul>
+                <li>Arquitectura de soluciones en la nube con Azure</li>
+                <li>Desarrollo y soporte de aplicaciones frontend y backend (React & FastAPI)</li>
+                <li>Documentación técnica y funcional bilingüe</li>
+                <li>Automatización de tareas operativas y despliegues</li>
+            <li>Mantenimiento de soluciones empresariales con SQL Server y SSMS</li>
+            </ul>
+
             <h3>Desarrollador de Automatización Industrial – TAYRONAMA SAS (Marzo 2025 - Julio 2025)</h3>
             <ul>
                 <li>Desarrollé una aplicación en Python con Tkinter para trazabilidad del pesaje de cerdos.</li>
@@ -151,8 +170,28 @@ export default function Cv() {
                 </a>
             </p>
             </div>
-    </main>
-    </div>
+            </div>
+    </motion.main>
+          <motion.img src={circulo} alt="circulo" className="circulo"  layoutId="circulo1" transition={{ duration: 0.6, ease: "easeInOut" }} 
+          initial={{ opacity: 0.4 }}   
+            animate={{ opacity: 0.4 }}   
+            exit={{ opacity: 0}}/>
+
+          <motion.img src={circulo} alt="circulo2" className="circulo2" layoutId="circulo2" transition={{ duration: 0.6, ease: "easeInOut" }}
+          initial={{ opacity: 0.4 }}   
+            animate={{ opacity: 0.4 }}   
+            exit={{ opacity: 0}} />
+
+          <motion.img src={circulo} alt="circulo3" className="circulo3"  layoutId="circulo3" transition={{ duration: 0.6, ease: "easeInOut" }}
+          initial={{ opacity: 0.4 }}   
+            animate={{ opacity: 0.4 }}   
+            exit={{ opacity: 0}}/>
+
+          <motion.img src={circulo} alt="circulo4" className="circulo4"  layoutId="circulo4" transition={{ duration: 0.6, ease: "easeInOut" }}
+          initial={{ opacity: 0.4 }}   
+            animate={{ opacity: 0.4 }}   
+            exit={{ opacity: 0}}/>
+    </motion.div>
     </>
   );
 }

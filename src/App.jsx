@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./home.jsx";
-import Cv from "./cv.jsx";
-
-
+import Home from "./components/home.jsx";
+import Cv from "./components/cv.jsx";
+import Projects from "./components/projects.jsx";
+import { AnimatePresence, LayoutGroup } from "framer-motion";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/cv" element={<Cv />} />
-        <Route path="/api/download/cv" element={<Cv />} />
-        <Route path="/cv" element={<Cv />} />
-      </Routes>
-    </Router>
+    <LayoutGroup>
+      <AnimatePresence mode="wait">
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/cv" element={<Cv />} />
+            <Route path="/api/download/cv" element={<Cv />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+        </Router>
+      </AnimatePresence>
+    </LayoutGroup>
   );
 }
 

@@ -1,0 +1,55 @@
+:root{
+    --primary: #933d3d;
+    --secondary: #333;
+    --bg: #f9f9f9;
+    --text: #222;
+}
+
+h1{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--primary);
+}
+
+br{
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.projects .circulo {
+  position: absolute;
+  top: -80px;     /* pegado al borde superior */
+  left: 20px;
+  width: 280px;
+  height: 280px;
+  z-index: -1;
+}
+
+.projects .circulo2 {
+  position: absolute;
+  bottom: -100px; /* pegado al borde inferior */
+  right: 30px;
+  width: 350px;
+  height: 350px;
+  z-index: -1;
+}
+
+.projects .circulo3 {
+  position: absolute;
+  top: 50%;       /* en el centro */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+}
+
+.projects .circulo4 {
+  position: absolute;
+  top: 100px;     /* pegado al lateral */
+  right: -80px;
+  width: 150px;
+  height: 150px;
+  z-index: -1;
+}
