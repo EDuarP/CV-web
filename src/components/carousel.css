@@ -27,39 +27,56 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.6);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
-  flex-wrap: wrap;
+  z-index: 9999;
 }
 
 .modal-content {
-  position: relative;
-  background: white;
+  background: #fff;
+  border-radius: 12px;
   padding: 10px;
+  max-width: 900px;   /* equivalente a max-w-3xl */
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
   border-radius: 8px;
-  max-width: 90%;
-  flex-wrap: wrap;
-  max-height: 90%;
 }
 
-.modal-image {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  flex-wrap: wrap;
-}
 
-.close-btn {
+/* botón pequeño de cerrar */
+.modal-close {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  background: none;
+  top: 8px;
+  right: 100px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
   border: none;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* foco visible para accesibilidad */
+.modal-close:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 .certificados {
@@ -67,4 +84,30 @@
   align-items: center;   
   gap: 20px;                 
   justify-content: center; 
+}
+
+.button-next{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.button-prev{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
 }

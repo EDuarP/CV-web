@@ -12,10 +12,14 @@ body {
   color: var(--text);
 }
 
+
 .home {
-  padding: 60px 20px;
+  padding: 60px 50px;
   display: flex;
   justify-content: center;
+  max-width: fit-content;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero {
@@ -67,7 +71,7 @@ body {
 }
 
 .role {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--secondary);
   margin-top: 5px;
 }
@@ -75,7 +79,7 @@ body {
 .bio {
   margin-top: 20px;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #444;
 }
 
@@ -171,4 +175,10 @@ body {
   width: 150px;
   height: 150px;
   z-index: -1;
+}
+
+.certificados{
+  position: absolute;
+  bottom: 0px;
+  padding-top: 100px;
 }

@@ -6,6 +6,8 @@ export default function Carousel({ images }) {
   const [isPaused, setIsPaused] = useState(false);
   const visibleImages = 3;
   const maxIndex = Math.max(0, 2);
+  const [selectedImage, setSelectedImage] = useState(null);
+
   
 
   useEffect(() => {
@@ -23,6 +25,11 @@ export default function Carousel({ images }) {
   const handlePrev = () => {
     setCurrentIndex(prev => (prev <= 0 ? maxIndex : prev - 1));
   };
+  const handleNext = () => {
+    setCurrentIndex(prev => (prev >= maxIndex ? 0 : prev + 1));
+  };
+  const openModal = (image) => setSelectedImage(image);
+  const closeModal = () => setSelectedImage(null);
   
     return (
     <>    
@@ -38,10 +45,16 @@ export default function Carousel({ images }) {
         {/* Botón */}
         <button
           onClick={handlePrev}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 hover:bg-red-300 z-10"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 hover:bg-red-300 z-10 button-prev"
         >
           ◀
         </button>
+        <button onClick={handleNext}
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 hover:bg-red-300 z-10 button-next"   
+        >
+          ▶
+        </button>
+
           {/* Images Track */}
           <div className="relative">
             <div 
@@ -61,7 +74,7 @@ export default function Carousel({ images }) {
                     src={image}
                     alt={`Certificado ${index + 1}`}
                     className="w-full group-hover:scale-105 transition-transform duration-300 carrusel-img" 
-                    onClick={() => window.open(image, '_blank')}
+                    onClick={() => openModal(image)}
                   />
                 
                 </div>
@@ -70,6 +83,25 @@ export default function Carousel({ images }) {
           </div>
         </div>
       </div>
+      {/* Modal */}
+      {selectedImage && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="modal-close"
+              onClick={closeModal}
+              aria-label="Cerrar"
+              title="Cerrar"
+            >
+              ×
+            </button>
+            <img
+              src={selectedImage}
+              alt="Imagen ampliada"
+            />
+          </div>
+        </div>
+      )}
     </div>
     </>
     );

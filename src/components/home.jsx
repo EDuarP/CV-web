@@ -55,9 +55,9 @@ export default function Home() {
           <h1>Hola, soy <span>Eduardo Duarte</span></h1>
           <p className="role">Ingeniero Mecatrónico | Data Enthusiast</p>
           <p className="bio">
-            Soy un Ingeniero mecatrónico con experiencia en <strong>automatización</strong>, <strong>análisis avanzado de datos y optimización de procesos</strong>. Actualmente enfocado en el desarrollo de <strong>software</strong>, integrando soluciones inteligentes que conectan <strong>datos, tecnología y eficiencia operativa.</strong> Aquí encontrarás mi Hoja de Vida y una sección de Proyectos que enlazan a GitHub.
+            Soy un Ingeniero mecatrónico especializado en <strong>soluciones tecnológicas</strong> con experiencia en <strong>automatización</strong>, <strong>análisis avanzado de datos y optimización de procesos</strong>. Actualmente enfocado en el desarrollo de <strong>software</strong>, integrando soluciones inteligentes que conectan <strong>datos, tecnología y eficiencia operativa.</strong>
           </p>
-
+          <p>Aquí encontrarás mi Hoja de Vida y una sección de algunos Proyectos en los que he trabajado.</p>
           <div className="cta">
             <Link to="/cv" className="btn primary">Ver CV</Link>
             <Link to="/projects" className="btn secondary" viewTransition>Proyectos</Link>
@@ -101,13 +101,12 @@ export default function Home() {
       initial={{ opacity: 0.4 }}   
       animate={{ opacity: 0.4 }}   
       exit={{ opacity: 0}}/>
-
+      <h1 className="text-4xl font-bold text-gray-800 mb-6 certificados">Certificados ↓</h1>
     </main>
     
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
       {/* Header */}
       <div className="mb-8">
-        <h2 className="text-4xl font-bold text-gray-800 mb-6">Certificados ↓</h2>
         <Carousel images={images} />
       </div>
     </div>

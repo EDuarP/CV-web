@@ -16,9 +16,97 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    padding: 10%;
+    padding: 5%;
+    display: grid;
+    grid-column: 1fr;
+    width: 800px;
+    font-size: x-large
 }
 
 .font-bold{
     font-weight: bold;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas iguales */
+  grid-gap: 15px;
+  justify-items: center;
+  align-items: center;
+  max-width: 1000px;   /* ancho máximo total */
+  margin: 0 auto;
+}
+
+.gallery img {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 100%;
+  height: auto;       /* nunca se recorta */
+  object-fit: contain; /* asegura que no se deforme */
+  max-width: 100%;     /* evita que quede pequeña */
+  cursor: pointer;
+}
+
+
+/* la grande ocupa todo el ancho de las dos */
+.img-large {
+  grid-column: span 2;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  max-width: 900px;   /* equivalente a max-w-3xl */
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+
+/* botón pequeño de cerrar */
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 100px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* foco visible para accesibilidad */
+.modal-close:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
