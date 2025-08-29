@@ -8,22 +8,6 @@
 .ContainerCard{
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-.imagenes-centradas {
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.imagen3{
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
 }
 
 .texto{
@@ -32,10 +16,7 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin: 10 ;
     padding: 10%;
-    font-size: ;
 }
 
 .font-bold{
