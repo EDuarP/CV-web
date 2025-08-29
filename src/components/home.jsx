@@ -101,7 +101,6 @@ export default function Home() {
       initial={{ opacity: 0.4 }}   
       animate={{ opacity: 0.4 }}   
       exit={{ opacity: 0}}/>
-      <p>asd</p>
       <h1 className="certificados">Certificados ↓</h1>
     </main>
     
