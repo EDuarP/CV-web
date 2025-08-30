@@ -44,18 +44,21 @@ body {
   width: 100%;
   max-width: 50px;
   height: auto;
+  display: block;
 }
 
 .logo_linkedin {
   width: 100%;
   max-width: 55px;
   height: auto;
+  display: block;
 }
 
 .logo_mail{
   width: 100%;
   max-width: 50px;
   height: auto;
+  display: block;
 }
 
 
@@ -96,19 +99,21 @@ body {
   gap: 15px;
 }
 
+.btn{
+  display: inline-block;
+  z-index: 10;
+}
 
 .btn.primary {
   background: var(--primary);
   color: white;
   padding: 10px 20px;
-  font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .btn.secondary {
   background: var(--secondary);
   color: white;
   padding: 10px 20px;
-  font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .btn:hover {
@@ -121,12 +126,15 @@ body {
   display: flex;
   gap: 20px;
   font-size: 1.4rem;
+  z-index: 20;
 }
 
 .social a {
   color: var(--secondary);
   text-decoration: none;
   transition: 0.3s;
+  display: inline-block; /* Hace que el enlace envuelva la imagen */
+  padding: 5px;
 }
 
 .social a:hover {
@@ -210,7 +218,6 @@ body {
 .certificados{
   position: absolute;
   bottom: 0px;
-  padding-top: 100px;
   margin-top: clamp(2rem, 5vw, 4rem);
   transform: translateY(20px);
 }

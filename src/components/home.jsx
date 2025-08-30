@@ -101,7 +101,9 @@ export default function Home() {
       initial={{ opacity: 0.4 }}   
       animate={{ opacity: 0.4 }}   
       exit={{ opacity: 0}}/>
+
       <h1 className="certificados">Certificados ↓</h1>
+      
     </main>
     
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
